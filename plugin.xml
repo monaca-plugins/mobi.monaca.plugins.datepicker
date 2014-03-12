@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="mobi.monaca.plugins.datepicker"
+    version="1.0.0">
+
+    <name>DatePicker</name>
+	<description>DatePicker</description>
+    <engines>
+        <engine name="cordova" version=">=2.9.0" />
+    </engines>
+    <license>MIT</license>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="DatePicker">
+                <param name="ios-package" value="DatePicker" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/DatePicker.h" />
+        <source-file src="src/ios/DatePicker.m" compiler-flags="-fno-objc-arc" />
+    </platform>
+</plugin>

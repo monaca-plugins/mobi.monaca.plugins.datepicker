@@ -9,7 +9,10 @@
     <engines>
         <engine name="cordova" version=">=2.9.0" />
     </engines>
-    <license>MIT</license>
+    <js-module src="www/datePicker.js" name="DatePicker">
+        <clobbers target="plugins.datePicker" />
+    </js-module>
+
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="DatePicker">

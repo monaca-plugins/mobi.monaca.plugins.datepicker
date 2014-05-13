@@ -57,11 +57,5 @@ if (!window.plugins.datePicker) {
     }
 
 
-    Cordova.addConstructor(function() {
-        if(!window.plugins)
-        {
-            window.plugins = {};
-        }
-        window.plugins.datePicker = new DatePicker();
-    });
+    module.exports = new DatePicker();
 };

@@ -27,4 +27,7 @@
 
 - (void) show:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
 
+// for cordova 3.0 ~
+- (void) show: (CDVInvokedUrlCommand*)command;
+
 @end

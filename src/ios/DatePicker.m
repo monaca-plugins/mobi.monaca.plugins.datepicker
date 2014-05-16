@@ -69,6 +69,24 @@
     }
 }
 
+// for cordova 3.0 ~
+- (void) show: (CDVInvokedUrlCommand*)command
+{
+    if (isVisible) {
+		return;
+	}
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [self configureDatePicker:[command.arguments objectAtIndex:0]];
+        [self.datePickerSheet showInView:[[super webView] superview]];
+        [self.datePickerSheet setBounds:CGRectMake(0, 0, 320, 485)];
+        isVisible = YES;
+    } else {
+        [self showForPad: [command.arguments objectAtIndex:0]
+         ];
+    }
+}
+
 // for iPad
 - (BOOL)showForPad:(NSMutableDictionary *)options {
     if(!isVisible){

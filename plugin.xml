@@ -10,8 +10,11 @@
         <engine name="cordova" version=">=2.9.0" />
     </engines>
     <license>MIT</license>
-
     <platform name="android">
+        <js-module src="www/android/datePicker.js" name="DatePicker">
+            <clobbers target="plugins.datePicker" />
+        </js-module>
+
         <config-file target="res/xml/config.xml" parent="/*">
           <feature name="DatePickerPlugin">
               <param name="android-package" value="mobi.monaca.framework.plugin.DatePickerPlugin"/>
@@ -19,6 +22,9 @@
         </config-file>
     </platform>
     <platform name="ios">
+        <js-module src="www/ios/datePicker.js" name="DatePicker">
+            <clobbers target="plugins.datePicker" />
+        </js-module>
         <config-file target="config.xml" parent="/*">
             <feature name="DatePicker">
                 <param name="ios-package" value="DatePicker" />

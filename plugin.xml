@@ -11,15 +11,17 @@
     </engines>
     <license>MIT</license>
     <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DatePickerPlugin">
+                <param name="android-package" value="mobi.monaca.framework.plugin.DatePickerPlugin"/>
+            </feature>
+        </config-file>
+        
         <js-module src="www/android/datePicker.js" name="DatePicker">
             <clobbers target="plugins.datePicker" />
         </js-module>
 
-        <config-file target="res/xml/config.xml" parent="/*">
-          <feature name="DatePickerPlugin">
-              <param name="android-package" value="mobi.monaca.framework.plugin.DatePickerPlugin"/>
-          </feature>    
-        </config-file>
+        <source-file src="src/android/DatePickerPlugin.java" target-dir="src/com/plugin/datepicker" />
     </platform>
     <platform name="ios">
         <js-module src="www/ios/datePicker.js" name="DatePicker">

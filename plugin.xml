@@ -5,7 +5,9 @@
     version="1.0.0">
 
     <name>DatePicker</name>
-	<description>DatePicker</description>
+	<description>
+        DatePicker Plugin for Cordova/PhoneGap
+    </description>
     <engines>
         <engine name="cordova" version=">=2.9.0" />
     </engines>

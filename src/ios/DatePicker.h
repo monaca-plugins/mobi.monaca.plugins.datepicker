@@ -1,33 +1,21 @@
-//	Phonegap DatePicker Plugin
-//	Copyright (c) Greg Allen 2011
-//	MIT Licensed
+/*
+ Phonegap DatePicker Plugin for using Cordova 3 and iOS 7
+ https://github.com/sectore/phonegap3-ios-datepicker-plugin
+ 
+ Based on a previous plugin version by Greg Allen and Sam de Freyssinet.
+ 
+ Rewrite by Jens Krause (www.websector.de)
+ 
+ MIT Licensed
+*/
 
 #import <Foundation/Foundation.h>
-#ifdef CORDOVA_FRAMEWORK
-#import <Cordova/CDVPlugin.h>
-#else
-#import <Cordova/CDVPlugin.h>
-#endif
+#import <Cordova/CDV.h>
 
-#ifndef k_DATEPICKER_DATETIME_FORMAT
-#define k_DATEPICKER_DATETIME_FORMAT @"yyyy-MM-dd'T'HH:mm:ss'Z'"
-#endif
-
-@interface DatePicker : CDVPlugin <UIActionSheetDelegate, UIPopoverControllerDelegate> {
-	UIActionSheet *_datePickerSheet;
-	UIDatePicker *_datePicker;
-	NSDateFormatter *_isoDateFormatter;
-	BOOL isVisible;
+@interface DatePicker : CDVPlugin <UIPopoverControllerDelegate> {
+    
 }
 
-@property (nonatomic, retain) UIActionSheet* datePickerSheet;
-@property (nonatomic, retain) UIDatePicker* datePicker;
-@property (nonatomic, retain) NSDateFormatter* isoDateFormatter;
-@property (nonatomic, retain) UIPopoverController *datePickerPopover;
-
-- (void) show:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
-
-// for cordova 3.0 ~
-- (void) show: (CDVInvokedUrlCommand*)command;
+- (void)show:(CDVInvokedUrlCommand*)command;
 
 @end

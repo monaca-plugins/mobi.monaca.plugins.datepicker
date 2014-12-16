@@ -35,6 +35,7 @@
             </feature>
         </config-file>
         <header-file src="src/ios/DatePicker.h" />
-        <source-file src="src/ios/DatePicker.m" compiler-flags="-fno-objc-arc" />
+        <source-file src="src/ios/DatePicker.m" />
+        <resource-file src="src/ios/DatePicker.xib" />
     </platform>
 </plugin>

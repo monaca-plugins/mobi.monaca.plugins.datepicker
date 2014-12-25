@@ -58,11 +58,19 @@
     CGFloat height;
     
     if(UIInterfaceOrientationIsLandscape(deviceOrientation)){
-        width = self.webView.superview.frame.size.width;
-        height= self.webView.superview.frame.size.height;
+        NSNumber* version = [NSNumber numberWithFloat:[[UIDevice currentDevice] systemVersion].floatValue];
+        if (version.floatValue >= 8.0) {
+            width = [UIScreen mainScreen].bounds.size.width;
+            height= [UIScreen mainScreen].bounds.size.height;
+        }else{
+            
+            width = [UIScreen mainScreen].bounds.size.height;
+            height= [UIScreen mainScreen].bounds.size.width;
+            NSLog(@"width::: %f,height::: %f",width,height);
+        }
     } else {
-        width = self.webView.superview.frame.size.width;
-        height= self.webView.superview.frame.size.height;
+        width = [UIScreen mainScreen].bounds.size.width;
+        height= [UIScreen mainScreen].bounds.size.height;
     }
     
     self.datePickerContainer.frame = CGRectMake(0, 0, width, height);

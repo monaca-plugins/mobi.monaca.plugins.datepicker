@@ -1,5 +1,5 @@
-{ 
-  "name": "mobi.monaca.plugins.datepicker",
+{
+  "name": "monaca-plugin-datepicker",
   "version": "1.0.1",
   "description": "DatePicker Plugin for Cordova/PhoneGap",
   "author": "Monaca Team",

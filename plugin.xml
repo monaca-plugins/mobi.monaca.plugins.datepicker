@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="mobi.monaca.plugins.datepicker"
+    id="monaca-plugin-datepicker"
     version="1.0.1">
 
     <name>DatePicker</name>
@@ -18,7 +18,7 @@
                 <param name="android-package" value="com.native5.plugins.datepicker.DatePickerPlugin"/>
             </feature>
         </config-file>
-        
+
         <js-module src="www/android/datePicker.js" name="DatePicker">
             <clobbers target="plugins.datePicker" />
         </js-module>

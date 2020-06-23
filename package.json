@@ -1,10 +1,10 @@
 {
   "name": "monaca-plugin-datepicker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "DatePicker Plugin for Cordova/PhoneGap",
   "author": "Monaca Team",
   "license": "MIT",
   "publishConfig": {
-    "registry": "http://registry.monaca.io:4873"
+    "registry": "https://npm.monaca.io"
   }
 }

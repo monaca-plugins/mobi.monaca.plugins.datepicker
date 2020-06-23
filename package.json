@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "DatePicker Plugin for Cordova/PhoneGap",
   "author": "Monaca Team",
-  "license": "COPYRIGHT ASIAL CORPORATION",
+  "license": "MIT",
   "publishConfig": {
     "registry": "http://registry.monaca.io:4873"
   }
